@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Basbosty ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100%;font-family:'Cormorant Garamond',serif;background:#080306;color:#fff;overflow-x:hidden}
+body{background:
+radial-gradient(circle at 50% 20%,rgba(120,0,35,.45),transparent 38%),
+linear-gradient(145deg,#050204,#18050c 55%,#050204);}
+
+.hidden{display:none!important}
+.screen{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding:25px;overflow:hidden}
+
+.floating-hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.heart{position:absolute;bottom:-50px;font-size:18px;opacity:.75;animation:floatUp linear forwards;text-shadow:0 0 12px #ff174f}
+@keyframes floatUp{
+0%{transform:translateY(0) rotate(0deg) scale(.7);opacity:0}
+10%{opacity:.8}
+100%{transform:translateY(-115vh) rotate(360deg) scale(1.3);opacity:0}
+}
+
+.glow{position:absolute;width:300px;height:300px;background:#d5003f;border-radius:50%;filter:blur(110px);opacity:.18;animation:pulse 4s infinite}
+@keyframes pulse{50%{transform:scale(1.25);opacity:.28}}
+
+.login-card{
+position:relative;z-index:3;width:min(420px,92vw);text-align:center;
+padding:50px 30px;border:1px solid rgba(255,80,120,.25);
+background:rgba(20,4,11,.72);backdrop-filter:blur(18px);
+border-radius:28px;box-shadow:0 0 60px rgba(255,0,70,.14);
+}
+.small-title{letter-spacing:4px;text-transform:uppercase;font-size:12px;color:#ff9bb5}
+h1{font-family:'Great Vibes',cursive;font-size:58px;font-weight:500;margin:10px 0;color:#fff}
+.subtitle{color:#d9a9b7;font-size:17px;margin-bottom:30px}
+
+.heart-input{
+width:220px;height:195px;margin:0 auto 25px;position:relative;
+filter:drop-shadow(0 0 25px rgba(255,0,60,.35));
+}
+.heart-input:before,.heart-input:after{
+content:"";position:absolute;top:15px;width:112px;height:175px;
+background:linear-gradient(145deg,#ff174f,#a9002e);border-radius:110px 110px 0 0;
+}
+.heart-input:before{left:105px;transform:rotate(45deg);transform-origin:0 100%}
+.heart-input:after{left:3px;transform:rotate(-45deg);transform-origin:100% 100%}
+.heart-input input{
+position:absolute;z-index:2;left:25px;top:75px;width:170px;background:transparent;
+border:0;outline:0;color:#fff;text-align:center;font-size:19px;letter-spacing:2px;
+font-family:inherit;
+}
+.heart-input input::placeholder{color:#ffd0da}
+
+.enter-btn{
+border:1px solid #ff416d;background:linear-gradient(135deg,#ff174f,#b40035);
+color:white;padding:13px 35px;border-radius:50px;font-family:inherit;font-size:17px;
+cursor:pointer;box-shadow:0 8px 25px rgba(255,0,65,.25);transition:.3s
+}
+.enter-btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(255,0,65,.4)}
+.error{height:20px;margin-top:10px;color:#ff7898;font-size:14px}
+
+.memory{display:block;padding:65px 20px 120px}
+.memory-inner{position:relative;z-index:2;max-width:1050px;margin:auto;text-align:center}
+.eyebrow{letter-spacing:5px;text-transform:uppercase;color:#ff7e9d;font-size:12px}
+.memory h2{font-family:'Great Vibes';font-size:72px;font-weight:500;margin:8px 0 10px}
+.intro{color:#d9a9b7;font-size:20px;margin-bottom:45px}
+
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:35px}
+.photo-card{
+position:relative;padding:10px 10px 24px;border-radius:20px;
+background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.025));
+border:1px solid rgba(255,150,175,.18);box-shadow:0 20px 50px rgba(0,0,0,.35);
+transform:rotate(var(--r));transition:.5s;
+}
+.photo-card:hover{transform:rotate(0) translateY(-8px) scale(1.015);box-shadow:0 25px 65px rgba(255,0,70,.18)}
+.photo-card img{width:100%;height:390px;object-fit:cover;border-radius:14px;display:block}
+.photo-card p{font-family:'Great Vibes';font-size:30px;margin-top:16px;color:#ffd8e2}
+.photo-card .date-dot{font-family:inherit;font-size:12px;color:#b87c8d;letter-spacing:2px;margin-top:5px}
+
+.date-section{
+margin:100px auto 0;max-width:650px;padding:45px 30px;text-align:center;
+border-radius:28px;background:rgba(30,4,13,.72);border:1px solid rgba(255,80,120,.25);
+box-shadow:0 0 70px rgba(255,0,70,.12);backdrop-filter:blur(15px)
+}
+.date-section h3{font-family:'Great Vibes';font-size:58px;font-weight:500}
+.date-line{font-size:28px;color:#fff;margin:10px 0}
+.date-time{color:#ff9ab4;font-size:21px;letter-spacing:2px}
+.date-btn{
+margin-top:28px;border:0;border-radius:50px;padding:15px 34px;color:white;
+background:linear-gradient(135deg,#ff174f,#8f002d);font:600 18px 'Cormorant Garamond';
+cursor:pointer;box-shadow:0 10px 35px rgba(255,0,60,.3);transition:.3s
+}
+.date-btn:hover{transform:scale(1.04)}
+
+.surprise{
+position:fixed;inset:0;z-index:20;background:
+radial-gradient(circle at center,rgba(130,0,40,.8),rgba(4,1,3,.98) 70%);
+display:flex;align-items:center;justify-content:center;padding:25px;
+opacity:0;visibility:hidden;transition:1s
+}
+.surprise.show{opacity:1;visibility:visible}
+.message{
+max-width:850px;text-align:center;transform:translateY(30px) scale(.94);
+transition:1.2s .4s;
+}
+.surprise.show .message{transform:none}
+.message .to{font-size:16px;letter-spacing:5px;color:#ff9ab2;text-transform:uppercase}
+.message h4{font-family:'Great Vibes';font-size:78px;font-weight:500;margin:10px 0 22px}
+.message p{font-size:27px;line-height:1.65;color:#ffe7ed}
+.message .love{font-family:'Great Vibes';font-size:42px;color:#ff91ad;margin-top:18px}
+
+.confetti-heart{position:fixed;z-index:25;pointer-events:none;animation:burst 2.8s ease-out forwards}
+@keyframes burst{
+0%{transform:translate(0,0) scale(.4) rotate(0);opacity:1}
+100%{transform:translate(var(--x),var(--y)) scale(1.2) rotate(var(--rot));opacity:0}
+}
+
+@media(max-width:700px){
+h1{font-size:50px}.memory h2{font-size:58px}
+.gallery{grid-template-columns:1fr;gap:28px}
+.photo-card img{height:360px}
+.message h4{font-size:58px}.message p{font-size:22px}
+}
+
+@media(max-width:420px){
+.photo-card img{height:320px}.message h4{font-size:50px}
+.message p{font-size:19px}.date-section h3{font-size:48px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating-hearts" id="hearts"></div>
+<div class="glow"></div>
+
+<!-- PASSWORD SCREEN -->
+<section class="screen" id="loginScreen">
+  <div class="login-card">
+    <div class="small-title">A little secret for you</div>
+    <h1>To My Basbosty</h1>
+    <div class="subtitle">Only my queen knows the way in ❤️</div>
+
+    <div class="heart-input">
+      <input id="password" type="password" placeholder="Password" autocomplete="off">
+    </div>
+
+    <button class="enter-btn" onclick="unlock()">Open My Heart ❤️</button>
+    <div class="error" id="error"></div>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<main class="memory hidden" id="memoryScreen">
+  <div class="memory-inner">
+    <div class="eyebrow">For Basent • My Basbosty</div>
+    <h2>Our Little Memories</h2>
+    <p class="intro">Every picture has a memory... and every memory has you. ❤️</p>
+
+    <div class="gallery">
+      <article class="photo-card" style="--r:-1.4deg">
+        <img src="2h.jpeg" alt="Our memory 1">
+        <p>بحبك يا حياتي ❤️</p>
+        <div class="date-dot">A MEMORY I KEEP CLOSE</div>
+      </article>
+
+      <article class="photo-card" style="--r:1.2deg">
+        <img src="1d.jpeg" alt="Our memory 2">
+        <p>الملكة بسبوستي 👑❤️</p>
+        <div class="date-dot">MY FAVORITE PERSON</div>
+      </article>
+
+      <article class="photo-card" style="--r:1.5deg">
+        <img src="2d.jpeg" alt="Our memory 3">
+        <p>بحبك يا روح قلبي ❤️</p>
+        <div class="date-dot">YOU MAKE IT BETTER</div>
+      </article>
+
+      <article class="photo-card" style="--r:-1deg">
+        <img src="1h.jpeg" alt="Our memory 4">
+        <p>بسبوستي... أجمل حاجة في أيامي ❤️</p>
+        <div class="date-dot">ALWAYS YOU</div>
+      </article>
+    </div>
+
+    <section class="date-section">
+      <div class="eyebrow">One more thing...</div>
+      <h3>I have a date for my queen</h3>
+      <div class="date-line">01 • 11 • 2026 ❤️</div>
+      <div class="date-time">8:00 PM</div>
+      <button class="date-btn" onclick="openSurprise()">Open Your Invitation ✨</button>
+    </section>
+  </div>
+</main>
+
+<!-- SURPRISE -->
+<section class="surprise" id="surprise">
+  <div class="message">
+    <div class="to">To My Queen • Basbosty</div>
+    <h4>Today I write for you...</h4>
+    <p>
+      ya my queen...<br>
+      I want say for you...<br>
+      I love you so much and invite you to my favorite date<br>
+      <strong>1/11/2026 ❤️</strong>
+    </p>
+    <div class="love">love you baby ❤️</div>
+  </div>
+</section>
+
+<!-- Put your own permitted audio file here -->
+<audio id="music" loop preload="auto">
+  <source src="e1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const PASSWORD = "Basbosty";
+
+function unlock(){
+  const input = document.getElementById("password");
+  const error = document.getElementById("error");
+
+  if(input.value === PASSWORD){
+    document.getElementById("loginScreen").classList.add("hidden");
+    document.getElementById("memoryScreen").classList.remove("hidden");
+
+    const music = document.getElementById("music");
+    music.volume = 0.45;
+    music.play().catch(() => {
+      // Some browsers block autoplay. A user interaction will be needed.
+    });
+
+    window.scrollTo({top:0, behavior:"smooth"});
+  }else{
+    error.textContent = "Wrong password... try again, my queen ❤️";
+    input.value = "";
+    input.focus();
+  }
+}
+
+document.getElementById("password").addEventListener("keydown", function(e){
+  if(e.key === "Enter") unlock();
+});
+
+function createHeart(){
+  const container = document.getElementById("hearts");
+  const heart = document.createElement("span");
+  heart.className = "heart";
+  heart.textContent = Math.random() > .25 ? "♥" : "❤";
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (12 + Math.random()*24) + "px";
+  heart.style.animationDuration = (5 + Math.random()*7) + "s";
+  heart.style.animationDelay = Math.random()*2 + "s";
+  container.appendChild(heart);
+  setTimeout(()=>heart.remove(),14000);
+}
+setInterval(createHeart,450);
+
+function openSurprise(){
+  const surprise = document.getElementById("surprise");
+  surprise.classList.add("show");
+
+  const symbols = ["❤️","♥","❤","💗","💕","💖"];
+  for(let i=0;i<70;i++){
+    const h = document.createElement("div");
+    h.className = "confetti-heart";
+    h.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+    h.style.left = "50%";
+    h.style.top = "52%";
+    h.style.fontSize = (12+Math.random()*25)+"px";
+    h.style.setProperty("--x",(Math.random()*1000-500)+"px");
+    h.style.setProperty("--y",(Math.random()*900-450)+"px");
+    h.style.setProperty("--rot",(Math.random()*720-360)+"deg");
+    h.style.animationDelay = Math.random()*.35+"s";
+    surprise.appendChild(h);
+    setTimeout(()=>h.remove(),3300);
+  }
+}
+</script>
+
+</body>
+</html>
